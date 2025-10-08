@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-import { Skills, Tools } from "../../Shared/Constants";
+import { Contacts, Skills, Tools } from "../../Shared/Constants";
 
 import {
   setCompetition,
@@ -11,6 +11,7 @@ import {
 } from "./events";
 import {
   CompetitionUnit,
+  ContactsType,
   SkillsType,
   ToggleCompetitionType,
   ToolsType,
@@ -27,6 +28,13 @@ export const useSkills = create<SkillsType>()(
   devtools((set, get) => ({
     listSkills: Skills,
     setSkills: setSkills(set, get),
+  }))
+);
+
+export const useContacts = create<ContactsType>()(
+  devtools((set, get) => ({
+    listContacts: Contacts,
+    setContacts: setContacts(set, get),
   }))
 );
 

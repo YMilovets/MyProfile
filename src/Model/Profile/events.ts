@@ -2,6 +2,7 @@ import { EventGetParam, EventSetParam } from "../../Shared/types";
 
 import {
   CharactersType,
+  ContactsType,
   SkillsType,
   ToggleCompetitionType,
   ToolsType,
@@ -37,3 +38,10 @@ export function setCompetition(
     set({ ...get(), selectedUnit: competitionUnit });
 }
 
+export function setContacts(
+  set: EventSetParam<ContactsType>,
+  get: EventGetParam<ContactsType>
+) {
+  return (contacts: ContactsType["listContacts"]) =>
+    set({ ...get(), ...contacts });
+}

@@ -13,6 +13,11 @@ export type SkillsType = {
   setSkills: (tools: Array<string>) => void;
 };
 
+export type ContactsType = {
+  listContacts: Array<ContactType>;
+  setContacts: (contacts: Array<ContactType>) => void;
+};
+    
 export enum CompetitionUnit {
   Skills = "skills",
   Tools = "tools",
@@ -21,4 +26,10 @@ export enum CompetitionUnit {
 export type ToggleCompetitionType = {
   selectedUnit: CompetitionUnit;
   setSelectedUnit: (characters: CompetitionUnit) => void;
+};
+
+export type ContactType = {
+  id: string | number;
+  linkURL: string;
+  name: string;
 };

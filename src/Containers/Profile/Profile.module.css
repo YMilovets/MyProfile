@@ -1,0 +1,175 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25em minmax(0, 400px);
+    gap: 2em;
+    padding: 3em 10em;
+    height: calc(100vh - 6em);    
+    align-content: center;
+    max-width: 1920px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+div.background {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    position: static;
+    height: 100vh;
+}
+
+.image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5em;
+}
+
+.figure {
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    width: 8em;
+    position: absolute;
+    top: -4em;
+    left: calc(50% - 4.5em);
+}
+
+.content {
+    display: flex;
+    gap: 2.25em;
+    height: calc(100% - 3.5em);
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.content.content_tab {
+    width: 80%;
+    min-width: 31.75em;
+    align-self: center;
+}
+
+.profile_content {
+    display: flex;
+    gap: 1.25em;
+    height: calc(100% - 3.5em);
+    margin: 1.75em 1.75em 0;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 5em;
+    text-align: center;
+}
+
+.content.content__center {
+    justify-content: center;
+    align-items: center;
+}
+
+.skills, .tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em;
+    height: max-content;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_panel {
+    grid-column: 1 / span 2;
+    position: relative;
+    overflow: inherit;
+    --root-background: rgba(41, 45, 47, 0.9);
+}
+
+svg.icon_wrench, svg.icon_person, svg.icon_code  {
+    --root-width: 7rem;
+    --root-height: 7rem;
+    flex: 0 0 7rem;
+}
+
+.panel {
+    --root-border-radius: 1.5em;
+    --header-padding: 1em;
+    --root-background: rgba(41, 45, 47, 0.9);
+}
+
+.author {
+    font-size: 18px;
+    margin: 0;
+}
+
+.position {
+    font-size: 30px;
+    margin: 0;
+}
+
+.header {
+    font-size: 20px;
+    line-height: 1.1em;
+}
+
+.profile {
+    display: grid;
+    justify-items: center;
+}
+
+.telegram {
+    transform: rotate(-45deg);
+}
+
+.link {
+    color: var(--color-panton-light-5);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    align-items: center;
+
+    font-size: 14px;
+    border-radius: 0.75em;
+    padding: 0.75em 1.428em;
+    color: var(--color-panton-light-5);
+    text-decoration: none;
+    background: var(--color-panton-shade-2);
+    cursor: pointer;
+}
+
+.contact:hover {
+    text-decoration: underline;
+    background: var(--color-panton-dark-2);
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em;
+    height: max-content;
+}
+
+.icon_card {
+    --root-width: 7rem;
+    --root-height: 7rem;
+    flex: 0 1 auto;
+}
+
+.profile_info {
+    display: flex;
+    gap: 1.25em;
+    height: calc(100% - 3.5em);
+    margin: 1.75em 1.75em 0;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 5em;
+    text-align: center;
+}
