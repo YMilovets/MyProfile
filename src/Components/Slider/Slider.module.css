@@ -1,0 +1,53 @@
+.figure {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.point {
+    font-size: 14px;
+    border-radius: 0.75em;
+    padding: 0.75em 1em;
+    color: var(--color-panton-light-5);
+    text-decoration: none;
+    background: var(--color-panton-dark-1);
+    border: none;
+    cursor: pointer;
+}
+
+.point:hover {
+    background: var(--color-panton-dark-2);
+}
+
+.point.point__selected {
+    background: var(--color-panton-dark-3);
+}
+
+img.image, svg.image {
+    opacity: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    --cursor-type: zoom-in;
+}
+
+.image.images__active {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    z-index: 1;
+}

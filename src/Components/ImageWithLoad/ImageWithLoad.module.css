@@ -1,0 +1,15 @@
+.image {
+    --root-max-width: 41vw;
+    --cursor-type: default;
+
+    max-width: var(--root-max-width);
+    border-radius: 0.75em;
+    max-height: 50vh;
+    object-fit: contain;
+    cursor: var(--cursor-type);
+}
+
+.image.image__not_found {
+    --root-width: 24rem;
+    --root-height: 24rem;
+}
