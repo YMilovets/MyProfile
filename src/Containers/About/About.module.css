@@ -1,0 +1,81 @@
+.root {
+    background: var(--color-panton-shade-4);
+    min-height: calc(100vh - 10em);
+    margin-top: -77px;
+    padding: 5em;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1920px;
+    gap: 5em;
+    align-items: unset;
+    justify-content: center;
+}
+
+.panel_content {
+    margin: 1.75em;
+}
+
+.achievements {
+    margin: 0;
+    list-style: square;
+    display: grid;
+    gap: 1.25em;
+    padding-left: 1em;
+}
+
+.text {
+    grid-column: 1 / 2;
+    line-height: 2em;
+}
+
+.date {
+    text-transform: capitalize;
+    display: flex;
+    gap: 0.45em;
+    align-items: center;
+}
+
+.company {
+    display: flex;
+    gap: 0.5em;
+}
+
+.panel {
+    --root-border-radius: 1.5em;
+}
+
+.text p {
+    margin: 0;
+}
+
+.text {
+    line-height: 2;
+}
+
+.header {
+    margin-bottom: 1.25em;
+}
+
+.info {
+    padding: 1.5em 1.75em;
+    line-height: 2;
+    margin-top: auto;
+    --root-border-radius: 1.5em;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+img.icon {
+    width: 24px;
+    height: 24px;
+    --cursor-type: default;
+}
