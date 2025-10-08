@@ -1,0 +1,136 @@
+.root {
+    display: grid;
+    grid-template-columns: 8fr 7fr;
+    grid-template-rows: 25em minmax(0, 400px);
+    gap: 2em;
+    padding: 3em 10em;
+    height: calc(100vh - 6em);    
+    align-content: center;
+}
+
+.image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5em;
+}
+
+.figure {
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    width: 8em;
+    position: absolute;
+    top: -4em;
+    left: calc(50% - 4.5em);
+}
+
+.content {
+    display: flex;
+    gap: 2.25em;
+    height: calc(100% - 3.5em);
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.content.content_tab {
+    width: 80%;
+    min-width: 31.75em;
+    align-self: center;
+}
+
+.profile_content {
+    display: flex;
+    gap: 1.25em;
+    height: calc(100% - 3.5em);
+    margin: 1.75em 1.75em 0;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 5em;
+}
+
+.content.content__center {
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.skills, .tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em;
+    height: max-content;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_panel {
+    grid-column: 1 / span 2;
+    position: relative;
+    overflow: inherit;
+}
+
+svg.icon_wrench, svg.icon_person, svg.icon_code  {
+    --root-width: 7rem;
+    --root-height: 7rem;
+    flex: 0 0 7rem;
+}
+
+.panel {
+    --root-border-radius: 1.5em;
+    --header-padding: 1em;
+    --root-background: rgba(41, 45, 47, 0.9);
+}
+
+.author {
+    font-size: 18px;
+    margin: 0;
+}
+
+.position {
+    font-size: 30px;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    gap: 1.25em;
+    align-items: center;
+}
+
+.tab_item {
+    border: none;
+    background: none;
+    color: var(--color-panton-light-10);
+    cursor: pointer;
+}
+
+.tab_item.tab_item__active {
+    color: var(--color-panton-light-5);
+}
+
+.tab_item h1 {
+    font-size: 16px;
+    line-height: 1.25em;
+}
+
+.tab_item.tab_item__active h1 {
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.divider {
+    line-height: 1;
+    font-size: 500;
+}
