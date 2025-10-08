@@ -1,0 +1,163 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.projects:nth-of-type(2) .root:nth-of-type(2n) {
+    background: var(--color-panton-shade-3);
+}
+
+.projects:nth-of-type(1) .root:nth-of-type(2n - 1) {
+    background: var(--color-panton-shade-3);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project_content {
+    display: flex;
+    align-items: start;
+    margin: 0 10em;
+    gap: 2.5em;
+}
+
+.content {
+    flex: 1;
+    align-self: baseline;
+}
+
+.header {
+    flex: 1;
+    margin: 0 10em;
+}
+
+.header_label {
+    font-size: 48px;
+    margin-bottom: 0.5em;
+}
+
+.used_skills {
+    --root-border-radius: 1em;
+    --header-padding: 1em 0.75em;
+}
+
+.used_skills_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    height: max-content;
+    gap: 1em;
+}
+
+.used_skills_header {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.panel_header {
+    font-size: 24px;
+}
+
+.text p {
+    margin: 0 0 1em;
+    max-width: 40vw;
+}
+
+.project_text {
+    font-size: 13px;
+    padding: 0.923em 0.923em 0;
+    margin: 0;
+}
+
+.profile_info {
+    display: flex;
+    gap: 1.5em;
+    margin: 0 10em 1em;
+
+}
+
+.used_skills.used_skills__info {
+    width: max-content;
+}
+
+.date {
+    text-transform: capitalize;
+}
+
+.label_date {
+    --root-background: var(--color-panton-dark-2);
+}
+
+.label {
+    --root-background: var(--color-panton-dark-1);
+}
+
+.calendar {
+    --root-width: 16px;
+    --root-height: 16px;
+    position: relative;
+    top: 3px;
+    margin-right: 0.5em;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375em;
+    margin-right: 1.5em;
+    z-index: 1;
+    align-items: center;
+}
+
+.navigation_item {
+    height: 1em;
+    width: 1em;
+    border-radius: 0.5em;
+    background: var(--color-panton-dark-3);
+    border: 0;
+    cursor: pointer;
+}
+
+.navigation_item.navigation_item__visible {
+    background: var(--color-panton-dark-5);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 2.5em;
+}
+
+.project {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+}
+
+.nav_root {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.link {
+    margin: 0;
+}
+
+.link:last-of-type {
+    margin: 0 0 1em;
+}
+
+.link_url {
+    color: var(--color-panton-dark-10);
+}
