@@ -1,0 +1,100 @@
+.downloads {
+    padding: 5em 10em;
+}
+
+.root {
+    background: var(--color-panton-shade-3);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.header {
+    font-size: 48px;
+    margin-bottom: 0.5em;    
+}
+
+.link {
+    border-radius: 2.75em;
+    width: 4.5em;
+    height: 4.5em;
+    background: var(--color-panton-dark-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    border: 1px solid var(--color-panton-shade-1);
+}
+
+.link:hover {
+    background: var(--color-panton-dark-3);
+}
+
+.application {
+    display: grid;
+    grid-template-columns: 6.5em 1fr 8.5em;
+    gap: 2em;
+    align-items: center;
+}
+
+.application_info {
+    display: inline-flex;
+    gap: 2em;
+    font-size: 12px;
+}
+
+.application_tools {
+    margin: 0.375em 0;
+}
+
+.application_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.application_header h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1em;
+}
+
+.application_image {
+    margin: 0 0 0 2em;
+    width: 4.5em;
+    height: 4.5em;
+}
+
+.application_icon {
+    margin: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.label {
+    display: flex;
+    gap: 1em;
+}
+
+.description {
+    font-size: 13px;
+    margin: 0.5em 0 0;
+}
+
+.download {
+    --root-border-radius: 3em;
+}
+
+.list {
+    display: grid;
+    gap: 1.5em;
+}
+
+.skills {
+    display: flex;
+    gap: 1.5em;
+    margin: 0 0 1em;
+}
