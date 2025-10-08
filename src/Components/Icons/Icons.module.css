@@ -1,0 +1,12 @@
+.root {
+    --root-width: 24px;
+    --root-height: 24px;
+    --icon-fill-color: var(--color-panton-light-5);
+
+    width: var(--root-width);
+    height: var(--root-height);
+}
+
+.path {
+    fill: var(--icon-fill-color);
+}

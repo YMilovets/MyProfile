@@ -1,0 +1,13 @@
+export { default as ArrowDown } from "./ArrowDown";
+export { default as BookContact } from "./BookContact";
+export { default as Calendar } from "./Calendar";
+export { default as Close } from "./Close";
+export { default as Code } from "./Code";
+export { default as ContactCard } from "./ContactCard";
+export { default as GitHub } from "./GitHub";
+export { default as Home } from "./Home";
+export { default as Image } from "./Image";
+export { default as Mail } from "./Mail";
+export { default as ScanPerson } from "./ScanPerson";
+export { default as SendIcon } from "./SendIcon";
+export { default as Wrench } from "./Wrench";
