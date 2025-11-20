@@ -1,5 +1,5 @@
 .root {
-    --root-background: var(--color-panton-dark-1);
+    --root-background: var(--color-scheme-1);
     --root-border-radius: 2.25em;
     --header-padding: 1.5em 1.75em;
     background: var(--root-background);
@@ -7,10 +7,10 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--color-panton-dark-1);
+    border: 1px solid var(--color-scheme-1);
 }
 
 .header {
     padding: var(--header-padding);
-    background: var(--color-panton-shade-1);
+    background: var(--color-scheme-11);
 }

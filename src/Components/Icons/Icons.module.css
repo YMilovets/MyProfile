@@ -1,7 +1,7 @@
 .root {
     --root-width: 24px;
     --root-height: 24px;
-    --icon-fill-color: var(--color-panton-light-5);
+    --icon-fill-color: var(--color-scheme-15);
 
     width: var(--root-width);
     height: var(--root-height);

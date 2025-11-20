@@ -3,7 +3,7 @@
 }
 
 .root {
-    background: var(--color-panton-shade-3);
+    background: var(--color-scheme-13);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,16 +22,16 @@
     border-radius: 2.75em;
     width: 4.5em;
     height: 4.5em;
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2em;
-    border: 1px solid var(--color-panton-shade-1);
+    border: 1px solid var(--color-scheme-11);
 }
 
 .link:hover {
-    background: var(--color-panton-dark-3);
+    background: var(--color-scheme-3);
 }
 
 .application {

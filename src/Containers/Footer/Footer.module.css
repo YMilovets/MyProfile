@@ -3,7 +3,7 @@
     height: var(--footer-height);
     width: calc(100% - 20em);
     transform: translateY(var(--transform-position));
-    background: var(--color-panton-shade-1);
+    background: var(--color-scheme-11);
     position: relative;
     z-index: 1;
     border-radius: 3em 3em 0 0;
@@ -57,7 +57,7 @@
     text-align: center;
     width: inherit;
     padding-top: 1em;
-    border-top: 1px solid var(--color-panton-dark-3);
+    border-top: 1px solid var(--color-scheme-3);
     font-size: 13px;
     margin: auto 0 0;
     align-self: center;
@@ -81,5 +81,5 @@
 }
 
 .link {
-    color: var(--color-panton-dark-10);
+    color: var(--color-scheme-10);
 }

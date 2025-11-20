@@ -85,7 +85,7 @@ div.background {
     grid-column: 1 / span 2;
     position: relative;
     overflow: inherit;
-    --root-background: rgba(41, 45, 47, 0.9);
+    --root-background: var(--color-panel);
 }
 
 svg.icon_wrench, svg.icon_person, svg.icon_code  {
@@ -97,7 +97,7 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
 .panel {
     --root-border-radius: 1.5em;
     --header-padding: 1em;
-    --root-background: rgba(41, 45, 47, 0.9);
+    --root-background: var(--color-panel);
 }
 
 .author {
@@ -125,7 +125,7 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
 }
 
 .link {
-    color: var(--color-panton-light-5);
+    color: var(--color-scheme-15);
 }
 
 .contact {
@@ -137,15 +137,15 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
     font-size: 14px;
     border-radius: 0.75em;
     padding: 0.75em 1.428em;
-    color: var(--color-panton-light-5);
+    color: var(--color-scheme-15);
     text-decoration: none;
-    background: var(--color-panton-shade-2);
+    background: var(--color-scheme-12);
     cursor: pointer;
 }
 
 .contact:hover {
     text-decoration: underline;
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
 }
 
 .contacts {

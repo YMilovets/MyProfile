@@ -1,5 +1,5 @@
 .root {
-    background: var(--color-panton-shade-4);
+    background: var(--color-scheme-14);
     min-height: calc(100vh - 10em);
     margin-top: -77px;
     padding: 5em;

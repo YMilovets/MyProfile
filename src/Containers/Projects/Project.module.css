@@ -6,11 +6,11 @@
 }
 
 .projects:nth-of-type(2) .root:nth-of-type(2n) {
-    background: var(--color-panton-shade-3);
+    background: var(--color-scheme-13);
 }
 
 .projects:nth-of-type(1) .root:nth-of-type(2n - 1) {
-    background: var(--color-panton-shade-3);
+    background: var(--color-scheme-13);
 }
 
 .project {
@@ -91,11 +91,11 @@
 }
 
 .label_date {
-    --root-background: var(--color-panton-dark-2);
+    --root-background: var(--color-scheme-2);
 }
 
 .label {
-    --root-background: var(--color-panton-dark-1);
+    --root-background: var(--color-scheme-1);
 }
 
 .calendar {
@@ -119,13 +119,13 @@
     height: 1em;
     width: 1em;
     border-radius: 0.5em;
-    background: var(--color-panton-dark-3);
+    background: var(--color-scheme-0);
     border: 0;
     cursor: pointer;
 }
 
 .navigation_item.navigation_item__visible {
-    background: var(--color-panton-dark-5);
+    background: var(--color-scheme-5);
 }
 
 .projects {
@@ -159,5 +159,5 @@
 }
 
 .link_url {
-    color: var(--color-panton-dark-10);
+    color: var(--color-scheme-10);
 }

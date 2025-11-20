@@ -1,5 +1,5 @@
 .root {
-    --root-background: var(--color-panton-dark-1);
+    --root-background: var(--color-scheme-1);
     position: sticky;
     z-index: 1;
     top: 0;
@@ -30,27 +30,27 @@
     font-size: 14px;
     border-radius: 0.75em;
     padding: 0.857em 1.428em;
-    color: var(--color-panton-light-5);
+    color: var(--color-scheme-15);
     text-decoration: none;
-    background: var(--color-panton-shade-2);
+    background: var(--color-scheme-12);
     cursor: pointer;
 }
 
 .link:hover {
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
 }
 
 .link:focus-visible {
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
     outline: none;
 }
 
 .link:active {
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
 }
 
 .link.link__active {
-    background: var(--color-panton-dark-3);
+    background: var(--color-scheme-3);
 }
 
 .home {

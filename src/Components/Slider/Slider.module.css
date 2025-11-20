@@ -24,19 +24,19 @@
     font-size: 14px;
     border-radius: 0.75em;
     padding: 0.75em 1em;
-    color: var(--color-panton-light-5);
+    color: var(--color-scheme-15);
     text-decoration: none;
-    background: var(--color-panton-dark-1);
+    background: var(--color-scheme-1);
     border: none;
     cursor: pointer;
 }
 
 .point:hover {
-    background: var(--color-panton-dark-2);
+    background: var(--color-scheme-2);
 }
 
 .point.point__selected {
-    background: var(--color-panton-dark-3);
+    background: var(--color-scheme-3);
 }
 
 img.image, svg.image {

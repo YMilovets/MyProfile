@@ -90,7 +90,7 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
 .panel {
     --root-border-radius: 1.5em;
     --header-padding: 1em;
-    --root-background: rgba(41, 45, 47, 0.9);
+    --root-background: var(--color-panel);
 }
 
 .author {
@@ -112,12 +112,12 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
 .tab_item {
     border: none;
     background: none;
-    color: var(--color-panton-light-10);
+    color: var(--color-scheme-16);
     cursor: pointer;
 }
 
 .tab_item.tab_item__active {
-    color: var(--color-panton-light-5);
+    color: var(--color-scheme-15);
 }
 
 .tab_item h1 {
