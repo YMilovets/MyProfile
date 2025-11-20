@@ -1,15 +1,14 @@
 import clsx from "clsx";
 import TypeWriter from "typewriter-effect";
 
-import Header from "../../Components/Header";
 import HeaderLabel from "../../Components/HeaderLabel";
 import { ContactCard } from "../../Components/Icons";
 import Panel from "../../Components/Panel";
 import Plasma from "../../Components/Plasma";
 import ProfileInfo from "../../Components/ProfileInfo";
-import { useHeaders } from "../../Model/Global/state";
 import { useContacts } from "../../Model/Profile/state";
 import { getTranslation } from "../../Shared/utils";
+import CommonHeader from "../CommonHeader";
 import Competition from "../Competition";
 
 import { ContactIcons } from "./contacts";
@@ -17,7 +16,6 @@ import { ContactIcons } from "./contacts";
 import styles from "./Profile.module.css";
 
 function Profile() {
-  const routers = useHeaders((state) => state);
   const { listContacts } = useContacts((state) => state);
 
   return (
@@ -40,7 +38,7 @@ function Profile() {
               />
             </p>
           </ProfileInfo>
-          <Header isHome routers={routers} />
+          <CommonHeader isHome />
         </Panel>
         <Competition />
         <Panel

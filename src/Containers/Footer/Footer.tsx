@@ -1,21 +1,19 @@
-import Header from "../../Components/Header";
 import ProfileInfo from "../../Components/ProfileInfo";
 import { useMaterials } from "../../Model/Applications/state";
-import { useHeaders } from "../../Model/Global/state";
 import { REALIZE_YEAR } from "../../Shared/Constants";
 import { Sections } from "../../Shared/types";
 import { getTranslation } from "../../Shared/utils";
+import CommonHeader from "../CommonHeader";
 
 import styles from "./Footer.module.css";
 
 function Footer() {
-  const routers = useHeaders((state) => state);
   const { listMaterials } = useMaterials((state) => state);
 
   return (
     <footer className={styles.root} id={Sections.Footer}>
       <ProfileInfo />
-      <Header routers={routers} />
+      <CommonHeader />
       <h3 className={styles.sources}>{getTranslation("sources")}:</h3>
       <ul className={styles.list}>
         {listMaterials.map(({ id, linkURL, name }) => (

@@ -1,0 +1,6 @@
+.icon {
+    --icon-fill-color: var(--color-scheme-17);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

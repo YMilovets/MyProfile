@@ -23,6 +23,7 @@ export const Tools: Array<string> = [
   "Keycloak",
   "NPM",
   "Yarn",
+  "FSD",
 ];
 
 export const Contacts: Array<ContactType> = [
@@ -38,7 +39,7 @@ export const Contacts: Array<ContactType> = [
   },
   {
     id: "hh",
-    linkURL: "https://hh.ru/resume/1b34c73cff0f5a191b0039ed1f704d31515141",
+    linkURL: "https://hh.ru/resume/727063eaff0f7ba7650039ed1f6f6f414a5232",
     name: "Резюме на HH.ru",
   },
   {
