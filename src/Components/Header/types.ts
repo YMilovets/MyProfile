@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { Sections } from "../../Shared/types";
 
 export type RoutersType = {
@@ -11,4 +13,5 @@ export interface HeaderProps {
   highlightSection?: Sections;
   routers: Array<RoutersType>;
   isHome?: boolean;
+  renderRightFn?: ReactNode;
 }

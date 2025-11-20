@@ -8,7 +8,12 @@ import { HeaderProps } from "./types";
 
 import styles from "./Header.module.css";
 
-function Header({ highlightSection, routers, isHome }: HeaderProps) {
+function Header({
+  highlightSection,
+  routers,
+  isHome,
+  renderRightFn,
+}: HeaderProps) {
   const HomeIconContainer = memo(Home);
   return (
     <header className={styles.root}>
@@ -51,6 +56,7 @@ function Header({ highlightSection, routers, isHome }: HeaderProps) {
               </a>
             </li>
           ))}
+          {renderRightFn}
         </ul>
       </nav>
     </header>

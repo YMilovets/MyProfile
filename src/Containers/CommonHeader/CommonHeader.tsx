@@ -5,6 +5,7 @@ import {
   useHeaders,
   useHighlightSection,
 } from "../../Model/Global/state";
+import Theme from "../Theme";
 
 import { CommonHeaderProps } from "./types";
 
@@ -17,6 +18,7 @@ function CommonHeader({ isHome = false }: CommonHeaderProps) {
 
   return (
     <HeaderContainer
+      renderRightFn={<Theme />}
       routers={routers}
       highlightSection={highlightSection}
       isHome={isHome}

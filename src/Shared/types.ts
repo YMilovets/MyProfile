@@ -19,3 +19,9 @@ type EventCreateParams<TState> = Parameters<StateCreator<TState>>;
 export type EventSetParam<TState> = EventCreateParams<TState>[0];
 
 export type EventGetParam<TState> = EventCreateParams<TState>[1];
+
+export enum Themes {
+  Dark = "dark",
+  Light = "light",
+  Default = "no-preference",
+}

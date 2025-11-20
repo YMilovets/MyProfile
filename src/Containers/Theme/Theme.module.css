@@ -1,0 +1,23 @@
+.button {
+    font-size: 14px;
+    border-radius: 0.75em;
+    padding: 0 1.428em;
+    color: var(--color-scheme-15);
+    text-decoration: none;
+    background: var(--color-scheme-12);
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: var(--color-scheme-2);
+}
+
+.button:focus-visible {
+    background: var(--color-scheme-2);
+    outline: none;
+}
+
+.button:active {
+    background: var(--color-scheme-2);
+}
