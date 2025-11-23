@@ -116,7 +116,7 @@
 
 @media screen and (max-width: 800px) {
     .downloads {
-        --downloads-padding: 2em;
+        --downloads-padding: 4em 2em 2em;
     }
 
     .root {

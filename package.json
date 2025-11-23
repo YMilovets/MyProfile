@@ -1,7 +1,7 @@
 {
   "name": "profile",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "description": "Личная страница frontend-разработчика Миловец для представления своего портфолио и разработанных проектов",
   "scripts": {

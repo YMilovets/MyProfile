@@ -4,12 +4,12 @@ import TypeWriter from "typewriter-effect";
 import HeaderLabel from "../../Components/HeaderLabel";
 import { ContactCard } from "../../Components/Icons";
 import Panel from "../../Components/Panel";
-import Plasma from "../../Components/Plasma";
 import ProfileInfo from "../../Components/ProfileInfo";
 import { useContacts } from "../../Model/Profile/state";
 import { getTranslation } from "../../Shared/utils";
 import CommonHeader from "../CommonHeader";
 import Competition from "../Competition";
+import Video from "../Video";
 
 import { ContactIcons } from "./contacts";
 
@@ -20,7 +20,9 @@ function Profile() {
 
   return (
     <div className={styles.profile}>
-      <Plasma scale={2} className={styles.background} />
+      <div className={styles.background}>
+        <Video />
+      </div>
       <div className={styles.root}>
         <Panel className={styles.profile_panel}>
           <ProfileInfo className={styles.profile_info}>
