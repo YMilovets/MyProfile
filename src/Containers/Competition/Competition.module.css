@@ -37,8 +37,6 @@
 }
 
 .content.content_tab {
-    width: 80%;
-    min-width: 31.75em;
     align-self: center;
 }
 
@@ -84,7 +82,7 @@
 svg.icon_wrench, svg.icon_person, svg.icon_code  {
     --root-width: 7rem;
     --root-height: 7rem;
-    flex: 0 0 7rem;
+    flex: 0 1 7rem;
 }
 
 .panel {
@@ -107,17 +105,21 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
     display: flex;
     gap: 1.25em;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tab_item {
-    border: none;
-    background: none;
-    color: var(--color-scheme-16);
+    --root-background: none;
+    --root-background-hover: none;
+    --root-background-active: none;
+    --root-color: var(--color-scheme-16);
+    --root-padding: 0;
+
     cursor: pointer;
 }
 
 .tab_item.tab_item__active {
-    color: var(--color-scheme-15);
+    --root-color: var(--color-scheme-15);
 }
 
 .tab_item h1 {

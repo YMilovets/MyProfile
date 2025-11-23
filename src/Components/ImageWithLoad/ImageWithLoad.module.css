@@ -1,8 +1,10 @@
 .image {
     --root-max-width: 41vw;
+    --root-min-width: 100%;
     --cursor-type: default;
 
     max-width: var(--root-max-width);
+    min-width: var(--root-min-width);
     border-radius: 0.75em;
     max-height: 50vh;
     object-fit: contain;

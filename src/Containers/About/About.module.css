@@ -1,20 +1,22 @@
 .root {
+    --root-padding: 5em;
+
     background: var(--color-scheme-14);
     min-height: calc(100vh - 10em);
     margin-top: -77px;
-    padding: 5em;
+    padding: var(--root-padding);
     display: grid;
     justify-items: center;
     align-content: center;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     max-width: 1920px;
     gap: 5em;
     align-items: unset;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .panel_content {
@@ -48,6 +50,7 @@
 
 .panel {
     --root-border-radius: 1.5em;
+    flex: 1 1 22.5em;
 }
 
 .text p {
@@ -72,10 +75,18 @@
 .about {
     display: flex;
     flex-direction: column;
+    flex: 1 1 22.5em;
 }
 
 img.icon {
     width: 24px;
     height: 24px;
     --cursor-type: default;
+    --root-min-width: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .root {
+        --root-padding: 4em 2em 2em;
+    }
 }

@@ -1,21 +1,27 @@
 .downloads {
-    padding: 5em 10em;
+    --downloads-padding: 5em 10em;
+    padding: var(--downloads-padding);
 }
 
 .root {
+    --root-height: 100vh;
+    --root-top: 0;
+    
     background: var(--color-scheme-13);
-    height: 100vh;
+    height: var(--root-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: sticky;
-    top: 0;
+    top: var(--root-top);
     overflow: hidden;
 }
 
 .header {
     font-size: 48px;
-    margin-bottom: 0.5em;    
+    margin-bottom: 0.5em; 
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .link {
@@ -26,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2em;
+    margin: 0;
     border: 1px solid var(--color-scheme-11);
 }
 
@@ -35,10 +41,13 @@
 }
 
 .application {
-    display: grid;
-    grid-template-columns: 6.5em 1fr 8.5em;
-    gap: 2em;
+    --application-padding: 0 2em;
+
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: var(--application-padding);
 }
 
 .application_info {
@@ -54,6 +63,8 @@
 .application_header {
     display: flex;
     flex-direction: column;
+    flex: 1 0 10em;
+    margin: 0;
 }
 
 .application_header h2 {
@@ -63,7 +74,9 @@
 }
 
 .application_image {
-    margin: 0 0 0 2em;
+    --application-image-margin: 2em 0;
+
+    margin: var(--application-image-margin);
     width: 4.5em;
     height: 4.5em;
 }
@@ -72,6 +85,7 @@
     margin: 0;
     width: inherit;
     height: inherit;
+    --root-min-width: 100%;
 }
 
 .label {
@@ -97,4 +111,24 @@
     display: flex;
     gap: 1.5em;
     margin: 0 0 1em;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+    .downloads {
+        --downloads-padding: 2em;
+    }
+
+    .root {
+        --root-height: auto;
+        --root-top: auto;
+    }
+
+    .application {
+        --application-padding: 2em;
+    }
+
+    .application_image {
+        --application-image-margin: 0;
+    }
 }

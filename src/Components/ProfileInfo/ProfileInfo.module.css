@@ -15,6 +15,7 @@ img.image {
     height: auto;
     object-fit: cover;
     border-radius: 5em;
+    --root-min-width: 100%;
 }
 
 .figure {

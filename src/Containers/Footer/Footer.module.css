@@ -1,13 +1,16 @@
 .root {
     --footer-height: 400px;
+    --root-padding: 0 10em 5em;
+    --root-width: calc(100% - 20em);
+
     height: var(--footer-height);
-    width: calc(100% - 20em);
+    width: var(--root-width);
     transform: translateY(var(--transform-position));
     background: var(--color-scheme-11);
     position: relative;
     z-index: 1;
     border-radius: 3em 3em 0 0;
-    padding: 0 10em 5em;
+    padding: var(--root-padding);
     margin-top: 4em;
     display: flex;
     flex-direction: column;
@@ -82,4 +85,12 @@
 
 .link {
     color: var(--color-scheme-10);
+}
+
+@media screen and (max-width: 800px) {
+    .root {
+        --root-padding: 0 2em 5em;
+        --root-width: auto;
+        --footer-height: auto;
+    }
 }

@@ -40,31 +40,33 @@ function Profile() {
           </ProfileInfo>
           <CommonHeader isHome />
         </Panel>
-        <Competition />
-        <Panel
-          className={styles.panel}
-          header={
-            <HeaderLabel className={styles.header}>
-              {getTranslation("contacts")}
-            </HeaderLabel>
-          }
-        >
-          <div className={clsx(styles.content, styles.content__center)}>
-            <ContactCard className={styles.icon_card} />
-            <div className={styles.contacts}>
-              {listContacts.map(({ id, linkURL, name }) => (
-                <a
-                  target="_blank"
-                  key={id}
-                  href={linkURL}
-                  className={styles.contact}
-                >
-                  {ContactIcons[id]} {name}
-                </a>
-              ))}
+        <div className={styles.details}>
+          <Competition />
+          <Panel
+            className={styles.panel}
+            header={
+              <HeaderLabel className={styles.header}>
+                {getTranslation("contacts")}
+              </HeaderLabel>
+            }
+          >
+            <div className={clsx(styles.content, styles.content__center)}>
+              <ContactCard className={styles.icon_card} />
+              <div className={styles.contacts}>
+                {listContacts.map(({ id, linkURL, name }) => (
+                  <a
+                    target="_blank"
+                    key={id}
+                    href={linkURL}
+                    className={styles.contact}
+                  >
+                    {ContactIcons[id]} {name}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        </Panel>
+          </Panel>
+        </div>
       </div>
     </div>
   );

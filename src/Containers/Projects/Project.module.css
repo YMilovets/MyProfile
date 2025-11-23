@@ -1,8 +1,10 @@
 .root {
+    --root-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: var(--root-height);
 }
 
 .projects:nth-of-type(2) .root:nth-of-type(2n) {
@@ -17,28 +19,37 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 .project_content {
+    --project-content-margin: 0 10em;
+
     display: flex;
     align-items: start;
-    margin: 0 10em;
+    margin: var(--project-content-margin);
     gap: 2.5em;
+    flex-wrap: wrap;
 }
 
 .content {
-    flex: 1;
+    flex: 1 1 22.5rem;
     align-self: baseline;
 }
 
 .header {
+    --header-margin: 0 10em;
+
     flex: 1;
-    margin: 0 10em;
+    margin: var(--header-margin);
 }
 
 .header_label {
     font-size: 48px;
     margin-bottom: 0.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .used_skills {
@@ -66,7 +77,7 @@
 
 .text p {
     margin: 0 0 1em;
-    max-width: 40vw;
+    /* max-width: 40vw; */
 }
 
 .project_text {
@@ -76,10 +87,12 @@
 }
 
 .profile_info {
+    --profile-info-margin: 0 10em 1em;
+
     display: flex;
     gap: 1.5em;
-    margin: 0 10em 1em;
-
+    margin: var(--profile-info-margin);
+    flex-wrap: wrap;
 }
 
 .used_skills.used_skills__info {
@@ -161,4 +174,22 @@
 
 .link_url {
     color: var(--color-scheme-10);
+}
+
+@media screen and (max-width: 800px) {
+    .project_content {
+        --project-content-margin: 0 2em;
+    }
+
+    .profile_info {
+        --profile-info-margin: 0 2em 1em;
+    }
+
+    .header {
+        --header-margin: 0 2em;
+    }
+
+    .root {
+        --root-height: auto;
+    }
 }

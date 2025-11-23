@@ -3,6 +3,7 @@
     cursor: zoom-out;
     border-radius: 1em;
     --root-max-width: auto;
+    --root-min-width: auto;
 }
 
 .fullscreen {
