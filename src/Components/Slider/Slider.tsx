@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import clsx from "clsx";
 
+import Button from "../Button";
 import ImageWithLoad from "../ImageWithLoad";
 
 import { SliderProps } from "./types";
@@ -29,7 +30,7 @@ function Slider({ images, onClick }: SliderProps) {
         {Array<ReactNode>(images.length)
           .fill(null)
           .map((_, index) => (
-            <button
+            <Button
               className={clsx(styles.point, {
                 [styles.point__selected]: selectedId === index,
               })}
@@ -37,7 +38,7 @@ function Slider({ images, onClick }: SliderProps) {
               onClick={() => setSelectedId(index)}
             >
               {index + 1}
-            </button>
+            </Button>
           ))}
       </div>
     </div>

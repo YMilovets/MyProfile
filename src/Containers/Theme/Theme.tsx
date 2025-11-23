@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from "react";
 
+import Button from "../../Components/Button";
 import { setTheme } from "../../Model/Global/events";
 import { useTheme } from "../../Model/Global/state";
 import { Themes } from "../../Shared/types";
@@ -11,18 +12,16 @@ const themeKeyList = [Themes.Dark, Themes.Light, Themes.Default] as const;
 
 function Theme() {
   const theme = useTheme((state) => state);
-  
-  const systemLightTheme = matchMedia(
-    "(prefers-color-scheme: light)"
-  );
+
+  const systemLightTheme = matchMedia("(prefers-color-scheme: light)");
 
   const toggleTheme = (changedTheme: Themes, isChangeStorage = true) => {
     document.body.className = "";
     document.body.classList.add(changedTheme);
 
     if (isChangeStorage) {
-        localStorage.setItem("theme", changedTheme);
-        setTheme(changedTheme);
+      localStorage.setItem("theme", changedTheme);
+      setTheme(changedTheme);
     }
   };
 
@@ -43,19 +42,19 @@ function Theme() {
       return;
     }
 
-    systemLightTheme.addEventListener("change", ({ matches }) => {        
+    systemLightTheme.addEventListener("change", ({ matches }) => {
       toggleTheme(matches ? Themes.Light : Themes.Dark, false);
     });
   }, []);
 
   return (
-    <button
+    <Button
       onClick={handleTheme}
       title={ThemeIcon[theme].title}
       className={styles.button}
     >
       {ThemeIcon[theme].component}
-    </button>
+    </Button>
   );
 }
 

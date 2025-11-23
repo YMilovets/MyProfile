@@ -1,0 +1,34 @@
+.button {
+    --root-box-shadow: none;
+    --root-background: var(--color-scheme-12);
+    --root-background-hover: var(--color-scheme-2);
+    --root-background-focus: var(--color-scheme-2);
+    --root-background-active: var(--color-scheme-2);
+    --root-color: var(--color-scheme-15);
+    --root-padding: 0 1.428em;
+    --root-font-size: 14px;
+    --root-border-radius: 0.75em;
+
+    font-size: var(--root-font-size);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    padding: var(--root-padding);
+    color: var(--root-color);
+    background: var(--root-background);
+    box-shadow: var(--root-box-shadow);
+    border-radius: var(--root-border-radius);
+}
+
+.button:hover {
+    background: var(--root-background-hover);
+}
+
+.button:focus-visible {
+    background: var(--root-background-focus);
+    outline: none;
+}
+
+.button:active {
+    background: var(--root-background-active);
+}

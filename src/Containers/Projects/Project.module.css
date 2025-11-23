@@ -118,14 +118,15 @@
 .navigation_item {
     height: 1em;
     width: 1em;
-    border-radius: 0.5em;
-    background: var(--color-scheme-0);
-    border: 0;
-    cursor: pointer;
+
+    --root-border-radius: 0.5em;
+    --root-background: var(--color-scheme-0);
+    --root-box-shadow: 0 0 0.5em 0 var(--color-scheme-2);
+    --root-padding: 0;
 }
 
 .navigation_item.navigation_item__visible {
-    background: var(--color-scheme-5);
+    --root-background: var(--color-scheme-5);
 }
 
 .projects {

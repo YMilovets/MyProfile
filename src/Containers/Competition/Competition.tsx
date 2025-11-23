@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import clsx from "clsx";
 
+import Button from "../../Components/Button";
 import HeaderLabel from "../../Components/HeaderLabel";
 import Panel from "../../Components/Panel";
 import { useToggleCompetition } from "../../Model/Profile/state";
@@ -21,14 +22,14 @@ function Competition() {
         <div className={styles.header}>
           {Array.from(ListTabs).map(([tabName, { id }], index) => (
             <Fragment key={tabName}>
-              <button
+              <Button
                 onClick={() => setSelectedUnit(tabName)}
                 className={clsx(styles.tab_item, {
                   [styles.tab_item__active]: competitionType === id,
                 })}
               >
                 <HeaderLabel>{getTranslation(tabName)}</HeaderLabel>
-              </button>
+              </Button>
               {Array.from(ListTabs).length - 1 > index && (
                 <span className={styles.divider}>\</span>
               )}

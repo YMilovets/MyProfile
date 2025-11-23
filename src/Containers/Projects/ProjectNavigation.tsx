@@ -1,6 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 
+import Button from "../../Components/Button";
 import { useProjects } from "../../Model/Project/state";
 import { DELTA_SCROLL_POS } from "../../Shared/Constants";
 import { useScroll } from "../../Shared/hooks";
@@ -45,7 +46,7 @@ function ProjectNavigation({ id }: ProjectsProps) {
     <div className={styles.nav_root}>
       <nav className={styles.navigation}>
         {listProjects.map(({ id, title }, index) => (
-          <button
+          <Button
             onClick={handleNavClick(index)}
             key={id}
             className={clsx(styles.navigation_item, {

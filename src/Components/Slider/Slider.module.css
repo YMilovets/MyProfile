@@ -21,14 +21,9 @@
 }
 
 .point {
-    font-size: 14px;
-    border-radius: 0.75em;
-    padding: 0.75em 1em;
-    color: var(--color-scheme-15);
-    text-decoration: none;
-    background: var(--color-scheme-1);
-    border: none;
-    cursor: pointer;
+    --root-padding: 0.75em 1em;
+    --root-color: var(--color-scheme-15);
+    --root-background: var(--color-scheme-1);
 }
 
 .point:hover {

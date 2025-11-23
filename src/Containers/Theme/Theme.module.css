@@ -1,23 +1,7 @@
 .button {
-    font-size: 14px;
-    border-radius: 0.75em;
-    padding: 0 1.428em;
-    color: var(--color-scheme-15);
-    text-decoration: none;
-    background: var(--color-scheme-12);
-    cursor: pointer;
-    border: none;
-}
+    --root-box-shadow: 0 0 0.5em 0 var(--color-scheme-2);
+    border: 1px dashed var(--color-scheme-14);
 
-.button:hover {
-    background: var(--color-scheme-2);
-}
-
-.button:focus-visible {
-    background: var(--color-scheme-2);
-    outline: none;
-}
-
-.button:active {
-    background: var(--color-scheme-2);
+    --root-background: var(--color-scheme-2);
+    --root-background-hover: var(--color-scheme-3);
 }
