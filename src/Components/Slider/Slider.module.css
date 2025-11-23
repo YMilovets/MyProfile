@@ -39,7 +39,7 @@ img.image, svg.image {
     opacity: 0;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    width: fit-content;
+    width: max-content;
     --cursor-type: zoom-in;
 }
 

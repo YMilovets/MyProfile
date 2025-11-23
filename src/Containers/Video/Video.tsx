@@ -24,6 +24,7 @@ function Video() {
       className={styles.video}
       autoPlay
       loop
+      muted
       src={["video", `plasma_${currentTheme}.mp4`].join("/")}
     />
   );
