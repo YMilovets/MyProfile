@@ -39,6 +39,7 @@ const dictionary = new Map([
       Имеется опыт работы с высоконагруженными web-приложениями в режиме
       реального времени.`,
   ],
+  ["menu", "Меню"],
 ]);
 
 export default function getTranslation(translateId: string) {

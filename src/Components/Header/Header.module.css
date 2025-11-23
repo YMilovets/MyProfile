@@ -13,7 +13,26 @@
     z-index: 1;
 }
 
+.button {
+    --root-box-shadow: 0 0 0.5em 0 var(--color-scheme-2);
+}
+
 .list {
+    --list-padding: 0.35em;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 2.8125em;
+    width: max-content;
+    list-style: none;
+    margin: 0;
+    gap: 0.35em;
+    background: var(--color-panel);
+    border-radius: 0.85em;
+    padding: var(--list-padding);
+}
+
+.list_menu {
     display: flex;
     width: max-content;
     list-style: none;
@@ -33,7 +52,9 @@
     color: var(--color-scheme-15);
     text-decoration: none;
     background: var(--color-scheme-12);
+    box-shadow: 0 0 0.5em 0 var(--color-scheme-2);
     cursor: pointer;
+    flex: 1;
 }
 
 .link:hover {
@@ -63,4 +84,92 @@
     justify-content: center;
     align-items: center;
     padding: 0 1.428em;
+    flex: 1 0 auto;
+}
+
+.item.item__button {
+    --item-display: none;
+    display: var(--item-display);
+}
+
+.menu__list {
+    --menu-display: flex;
+    --menu-padding: 0;
+
+    display: var(--menu-display);
+    padding: var(--menu-padding);
+    background: var(--color-panel);
+    border-radius: 1em;
+    gap: 0.35em;
+}
+
+@media screen and (max-width: 1365px) {
+    .menu__list.menu__list_active, .menu__list.menu__list_closed {
+        --menu-display: grid;
+        --menu-animation: none;
+        --menu-padding: 0.35em;
+
+        position: absolute;
+        margin-top: 1em;
+        padding: var(--menu-padding);
+        gap: 0.35em;
+        width: 100%;
+        left: -0.35em;
+
+        animation: var(--menu-animation);
+    }
+
+    .menu__list {
+        --menu-display: none;
+    }
+
+    .menu__list.menu__list_bottom {
+        bottom: 4.5125em;
+    }
+
+    .menu__list.menu__list_active {
+        --menu-animation: menu-fade-in 200ms forwards;
+    }
+
+    .menu__list.menu__list_closed {
+        --menu-animation: menu-fade-out 200ms forwards;
+    }
+
+    .item.item__button {
+        --item-display: flex;
+    }
+    
+    .menu {
+        order: 1;
+        position: relative;
+        grid-column: 1 / span 3;
+    }
+    
+    .list {
+        --list-padding: 0.35em 0.35em 0;
+    }
+}
+
+@keyframes menu-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes menu-fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 }
