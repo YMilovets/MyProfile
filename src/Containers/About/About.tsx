@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 import HeaderLabel from "../../Components/HeaderLabel";
 import { Calendar } from "../../Components/Icons";
 import Panel from "../../Components/Panel";
 import { useEnterprises } from "../../Model/About/state";
-import { useScroll } from "../../Shared/hooks";
+import { useObserver } from "../../Shared/hooks";
 import { Sections } from "../../Shared/types";
 import { getDate, getTranslation } from "../../Shared/utils";
 
@@ -18,22 +18,18 @@ function About() {
   const about = useEnterprises((state) => state.about);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleScroll = () => {
-    const offsetTop = document.getElementById(Sections.About)?.offsetTop ?? 0;
+  const typewriterTextRef = useRef<HTMLDivElement | null>(null);
 
-    if (scrollY >= offsetTop) {
-      setIsScrolled(true);
-      document.removeEventListener("scroll", handleScroll);
-    }
-  };
-
-  useScroll(handleScroll);
+  useObserver({
+    observeElement: typewriterTextRef,
+    onObserve: () => setIsScrolled(true),
+  });
 
   return (
     <div className={styles.root} id={Sections.About}>
       <div className={styles.content}>
         {about && (
-          <div className={styles.about}>
+          <div ref={typewriterTextRef} className={styles.about}>
             <HeaderLabel className={styles.header}>О себе</HeaderLabel>
             <Typewriter
               component="p"

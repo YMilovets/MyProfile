@@ -1,12 +1,6 @@
-import { useState } from "react";
-import Typewriter from "typewriter-effect";
-
 import HeaderLabel from "../../Components/HeaderLabel";
 import { Calendar } from "../../Components/Icons";
 import Label from "../../Components/Label";
-import Slider from "../../Components/Slider";
-import { setFullscreenImgSrc } from "../../Model/Project/events";
-import { useScroll } from "../../Shared/hooks";
 import { getDate } from "../../Shared/utils";
 
 import { ProjectProps } from "./types";
@@ -14,29 +8,13 @@ import { ProjectProps } from "./types";
 import styles from "./Project.module.css";
 
 function ProjectArticle({
-  description,
   title,
-  imageSources = [],
   usedSkills = [],
   projectYears,
   URL,
-  id,
   repository,
-}: ProjectProps) {
-  const isExistImages = imageSources.length > 0;
+}: Omit<ProjectProps, "imageSources" | "id">) {
   const isExistSkills = usedSkills.length > 0;
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const offsetTop = document.getElementById(id)?.offsetTop ?? 0;
-
-    if (scrollY >= offsetTop) {
-      setIsScrolled(true);
-      document.removeEventListener("scroll", handleScroll);
-    }
-  };
-
-  useScroll(handleScroll);
 
   return (
     <>
@@ -81,32 +59,6 @@ function ProjectArticle({
             ))}
           </div>
         )}
-      </div>
-      <div className={styles.project_content}>
-        {isExistImages && (
-          <Slider
-            images={imageSources.map((source) => ({
-              source,
-            }))}
-            onClick={setFullscreenImgSrc}
-          />
-        )}
-        <div className={styles.content}>
-          {description && (
-            <div className={styles.text}>
-              <Typewriter
-                component="p"
-                options={{
-                  strings: description,
-                  delay: 10,
-                  loop: false,
-                  deleteSpeed: 0,
-                  autoStart: isScrolled,
-                }}
-              />
-            </div>
-          )}
-        </div>
       </div>
     </>
   );

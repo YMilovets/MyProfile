@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import clsx from "clsx";
 
 import Button from "../Button";
@@ -8,9 +8,7 @@ import { SliderProps } from "./types";
 
 import styles from "./Slider.module.css";
 
-function Slider({ images, onClick }: SliderProps) {
-  const [selectedId, setSelectedId] = useState(0);
-
+function Slider({ images, onClick, selectedId, onSelect }: SliderProps) {
   return (
     <div className={styles.root}>
       <figure className={styles.figure}>
@@ -35,7 +33,7 @@ function Slider({ images, onClick }: SliderProps) {
                 [styles.point__selected]: selectedId === index,
               })}
               key={index}
-              onClick={() => setSelectedId(index)}
+              onClick={() => onSelect?.(index)}
             >
               {index + 1}
             </Button>

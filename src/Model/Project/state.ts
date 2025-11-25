@@ -9,5 +9,6 @@ export const useProjects = create<ProjectsType>()(
     projects: Projects,
     personalProjects: PersonalProjects,
     fullscreenImgSrc: null,
+    displayProjectId: null,
   }))
 );

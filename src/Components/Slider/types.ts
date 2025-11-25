@@ -5,4 +5,6 @@ export interface SliderProps {
     onClick?: () => void;
   }>;
   onClick?: (source: string) => void;
+  selectedId: number;
+  onSelect?: (selectedId: number) => void;
 }

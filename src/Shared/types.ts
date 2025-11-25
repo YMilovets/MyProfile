@@ -1,3 +1,4 @@
+import { RefObject } from "react";
 import { StateCreator } from "zustand";
 
 export enum Sections {
@@ -19,6 +20,18 @@ type EventCreateParams<TState> = Parameters<StateCreator<TState>>;
 export type EventSetParam<TState> = EventCreateParams<TState>[0];
 
 export type EventGetParam<TState> = EventCreateParams<TState>[1];
+
+export type ObserverOptions<TElement> = Partial<{
+  queryElement: TElement;
+  observeElement: RefObject<TElement>;
+  onObserve: (options: { intersectionRatio: number; target: Element }) => void;
+  onObserveOver: (options: {
+    intersectionRatio: number;
+    target: Element;
+  }) => void;
+  isUpdate: boolean;
+  threshold: Array<number>;
+}>;
 
 export enum Themes {
   Dark = "dark",

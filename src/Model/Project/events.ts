@@ -7,3 +7,10 @@ export const setFullscreenImgSrc = (
   useProjects.setState((state) => {
     return { ...state, fullscreenImgSrc };
   });
+
+export const setDisplayProjectId = (
+  displayProjectId: ProjectsType["displayProjectId"]
+) =>
+  useProjects.setState((state) => {
+    return { ...state, displayProjectId };
+  });

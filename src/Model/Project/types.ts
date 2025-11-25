@@ -13,5 +13,6 @@ export type ProjectsType = {
   projects: Array<ProjectItemType>;
   personalProjects: Array<ProjectItemType>;
   fullscreenImgSrc?: string | null;
+  displayProjectId: string | null;
   setFullscreenImgSrc: (imageSource: string | null) => void;
 };
