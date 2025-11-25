@@ -5,12 +5,25 @@
     top: 0;
 }
 
+.root.root_disabled {
+    opacity: 0;
+}
+
 .navigation {
     padding: 1em;
     display: flex;
     justify-content: center;
     border-radius: 0 0 1.5em 1.5em;
     z-index: 1;
+
+    display: grid;
+    height: 3.5125em;
+    align-content: start;
+    gap: 1em;
+}
+
+.navigation.navigation_bottom {
+    align-content: end;
 }
 
 .button {
@@ -101,6 +114,7 @@
     background: var(--color-panel);
     border-radius: 1em;
     gap: 0.35em;
+    margin: 0;
 }
 
 @media screen and (max-width: 1365px) {
@@ -109,12 +123,8 @@
         --menu-animation: none;
         --menu-padding: 0.35em;
 
-        position: absolute;
-        margin-top: 1em;
         padding: var(--menu-padding);
         gap: 0.35em;
-        width: 100%;
-        left: -0.35em;
 
         animation: var(--menu-animation);
     }
@@ -124,7 +134,7 @@
     }
 
     .menu__list.menu__list_bottom {
-        bottom: 4.5125em;
+        order: -1;
     }
 
     .menu__list.menu__list_active {
@@ -146,7 +156,7 @@
     }
     
     .list {
-        --list-padding: 0.35em 0.35em 0;
+        --list-padding: 0.35em;
     }
 }
 

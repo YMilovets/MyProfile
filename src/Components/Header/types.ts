@@ -14,4 +14,5 @@ export interface HeaderProps {
   routers: Array<RoutersType>;
   isHome?: boolean;
   renderRightFn?: ReactNode;
+  id?: string;
 }

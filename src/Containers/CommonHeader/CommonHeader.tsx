@@ -1,23 +1,17 @@
-import { memo } from "react";
-
 import Header from "../../Components/Header";
-import {
-  useHeaders,
-  useHighlightSection,
-} from "../../Model/Global/state";
+import { useHeaders, useHighlightSection } from "../../Model/Global/state";
 import Theme from "../Theme";
 
 import { CommonHeaderProps } from "./types";
 
-function CommonHeader({ isHome = false }: CommonHeaderProps) {
+function CommonHeader({ isHome = false, id }: CommonHeaderProps) {
   const highlightSection = useHighlightSection((state) => state);
 
   const routers = useHeaders((state) => state);
 
-  const HeaderContainer = memo(Header);
-
   return (
-    <HeaderContainer
+    <Header
+      id={id}
       renderRightFn={<Theme />}
       routers={routers}
       highlightSection={highlightSection}

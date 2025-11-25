@@ -1,6 +1,7 @@
 import { memo } from "react";
 import clsx from "clsx";
 
+import { FOOTER_MENU_ID } from "../../Shared/Constants";
 import { getTranslation } from "../../Shared/utils";
 import Button from "../Button";
 import { Home } from "../Icons";
@@ -15,13 +16,31 @@ function Header({
   routers,
   isHome,
   renderRightFn,
+  id
 }: HeaderProps) {
   const HomeIconContainer = memo(Home);
-  const { isVisible, flexMenuRef, buttonRef, handleClick } = useMenu();
+  const {
+    isVisible,
+    isBottom,
+    isDisableMenu,
+    flexMenuRef,
+    buttonRef,
+    navigationLinkRef,
+    handleClick,
+  } = useMenu();
 
   return (
-    <header className={styles.root}>
-      <nav className={styles.navigation}>
+    <header
+      id={id}
+      className={clsx(styles.root, {
+        [styles.root_disabled]: isDisableMenu && id !== FOOTER_MENU_ID,
+      })}
+    >
+      <nav
+        className={clsx(styles.navigation, {
+          [styles.navigation_bottom]: isBottom,
+        })}
+      >
         <ul className={styles.list}>
           <li className={clsx(styles.item, styles.item__main)}>
             <a
@@ -49,39 +68,40 @@ function Header({
               {getTranslation("menu")}
             </Button>
           </li>
-          <li className={styles.menu}>
-            <ul
-              ref={flexMenuRef}
-              className={clsx(styles.menu__list, {
-                [styles.menu__list_closed]: !isVisible,
-                [styles.menu__list_active]: isVisible,
-              })}
-            >
-              {routers.map(({ id, name, onClick, isSmoothScroll = true }) => (
-                <li className={styles.item} key={id}>
-                  <a
-                    className={clsx(styles.link, {
-                      [styles.link__active]: highlightSection === id,
-                    })}
-                    onClick={() => {
-                      onClick?.();
-                      if (!isSmoothScroll) return;
-                      window.scroll({
-                        top: document.getElementById(id)?.offsetTop ?? 0,
-                        left: 0,
-                        behavior: "smooth",
-                      });
-                    }}
-                  >
-                    {name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </li>
           <li className={clsx(styles.item, styles.item__main)}>
             {renderRightFn}
           </li>
+        </ul>
+
+        <ul
+          ref={flexMenuRef}
+          className={clsx(styles.menu__list, {
+            [styles.menu__list_active]: isVisible,
+            [styles.menu__list_bottom]: isBottom,
+          })}
+        >
+          {routers.map(({ id, name, onClick, isSmoothScroll = true }) => (
+            <li className={styles.item} key={id}>
+              <a
+                ref={navigationLinkRef}
+                className={clsx(styles.link, {
+                  [styles.link__active]: highlightSection === id,
+                })}
+                onClick={(e) => {
+                  onClick?.();
+                  handleClick(e);
+                  if (!isSmoothScroll) return;
+                  window.scroll({
+                    top: document.getElementById(id)?.offsetTop ?? 0,
+                    left: 0,
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                {name}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

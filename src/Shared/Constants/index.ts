@@ -1,4 +1,5 @@
 import { ContactType } from "../../Model/Profile/types";
+import { Sections } from "../types";
 
 export const Skills: Array<string> = [
   "React",
@@ -56,3 +57,4 @@ export const Contacts: Array<ContactType> = [
 
 export const DELTA_SCROLL_POS = 0.5;
 export const REALIZE_YEAR = 2025;
+export const FOOTER_MENU_ID = `${Sections.Footer}Menu`;
