@@ -1,6 +1,6 @@
 import ProfileInfo from "../../Components/ProfileInfo";
 import { useMaterials } from "../../Model/Applications/state";
-import { REALIZE_YEAR } from "../../Shared/Constants";
+import { FOOTER_MENU_ID, REALIZE_YEAR } from "../../Shared/Constants";
 import { Sections } from "../../Shared/types";
 import { getTranslation } from "../../Shared/utils";
 import CommonHeader from "../CommonHeader";
@@ -13,7 +13,7 @@ function Footer() {
   return (
     <footer className={styles.root} id={Sections.Footer}>
       <ProfileInfo />
-      <CommonHeader />
+      <CommonHeader id={FOOTER_MENU_ID} />
       <h3 className={styles.sources}>{getTranslation("sources")}:</h3>
       <ul className={styles.list}>
         {listMaterials.map(({ id, linkURL, name }) => (

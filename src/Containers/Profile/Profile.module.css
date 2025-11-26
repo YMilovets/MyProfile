@@ -136,6 +136,7 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
     display: grid;
     justify-items: center;
     height: var(--profile-height);
+    overflow: hidden;
 }
 
 .telegram {
@@ -195,7 +196,7 @@ svg.icon_wrench, svg.icon_person, svg.icon_code  {
 .details {
     display: grid;
     gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 }
 
 @media screen and (max-width: 1365px) {
